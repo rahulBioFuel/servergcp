@@ -22,6 +22,10 @@ db.connect(err => {
     console.log('Connected to MySQL database.');
 });
 
+app.get('/', (req, res) => {
+    res.send('OK');
+});
+
 app.post('/api/events', (req, res) => {
     const { eventName, eventDate, location } = req.body;
 
