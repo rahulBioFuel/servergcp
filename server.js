@@ -7,6 +7,9 @@ const PORT = 3000;
 
 app.use(bodyParser.json());
 
+const cors = require('cors');
+app.use(cors());
+
 const db = mysql.createConnection({
     host: process.env.DB_HOST || 'localhost',
     user: process.env.DB_USER || 'dev',
